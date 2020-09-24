@@ -1,0 +1,82 @@
+#RELEASES INFO
+releases_name: "paasta-portal-release"
+
+# STEMCELL INFO
+stemcell_os: "ubuntu-xenial"                                            # stemcell os
+stemcell_version: "315.64"                                              # stemcell version
+stemcell_alias: "default"                                               # stemcell alias
+
+# NETWORKS INFO
+internal_networks_name: "paasta"                                        # networks : internal network name
+external_networks_name: "paasta"                                        # networks : external network name
+haproxy_public_ip: "<HAPROXY_PUBLIC_IP>"                                # networks : haproxy public ip (e.g. "00.00.00.00")
+
+#VN INFO
+vm_type_tiny: "small"
+vm_type_small: "portal_small"
+vm_type_medium: "portal_medium"
+
+# PAASTA INFO
+paasta_deployment_name: "paasta"                                        # paasta : deployment name
+paasta_network_name: "default"                                          # paasta : public network name
+paasta_public_haproxy_network_name: "paasta"                            # paasta : public haproxy network name
+paasta_domain: "<PAASTA_DOMAIN>"                                        # paasta : domain (e.g. "company.co.kr")
+cc_db_id: "<CC_DB_ID>"                                                  # paasta : cloud config database id
+cc_db_password: "<CC_DB_PASSWORD>"                                      # paasta : cloud config database password (e.g. "ccdb")
+uaa_db_id: "<UAA_DB_ID>"                                                # paasta : uaa database database id
+uaa_db_password: "<UAA_DB_PASSWORD>"                                    # paasta : cloud config database password (e.g. "uaa")
+
+#HAPROXY INFO
+web-user-subdomain: "<WEB-USER-SUBDOMAIN>"                              # haproxy : web user subdomain
+web-admin-subdomain: "<WEB-ADMIN-SUBDOMAIN>"                            # haproxy : web admin subdomain
+web-eureka-subdomain: "<WEB-EUREKA-SUBDOMAIN>"                          # haproxy : web eureka subdomain
+
+# MARIADB INFO
+mariadb_disk_type: "20GB"                                               # mariadb : database disk type
+mariadb_port: "<MARIADB_PORT>"                                          # mariadb : database port (e.g. 13306) -- Do Not Use "3306"
+mariadb_user_password: "<MARIADB_ADMIN_PASSWORD>"                       # mariadb : database user password (e.g. "Paasta@2020")
+
+# BINARY_STORAGE INFO
+binary_storage_disk_type: "10GB"                                        # binary storage : disk type
+binary_storage_username: "<BINARY_STORAGE_USERNAME>"                    # binary storage : username (e.g. "paasta-portal")
+binary_storage_password: "<BINARY_STORAGE_PASSWORD>"                    # binary storage : password (e.g. "paasta")
+binary_storage_tenantname: "<BINARY_STORAGE_TENANTNAME>"                # binary storage : tenantname (e.g. "paasta-portal")
+binary_storage_email: "<BINARY_STORAGE_EMAIL>"                          # binary storage : email (e.g. "paasta@paasta.com")
+
+# CLOUDFOUNDRY INFO
+cf_admin_password: "<CF_ADMIN_PASSWORD>"                                # cloudfoundry : (e.g. "admin")
+cf_uaa_admin_client_secret: "<CF_UAA_ADMIN_CLIENT_PASSWORD>"            # cloudfoundry : (e.g. "admin-secret")
+
+# MAIL_SMTP INFO
+mail_smtp_host: "<MAIL_SMTP_HOST>"                                      # mail-smtp : host (e.g. "smtp.gmail.com")
+mail_smtp_port: "<MAIL_SMTP_PORT>"                                      # mail-smtp : port (e.g. "465")
+mail_smtp_username: "<MAIL_SMTP_USERNAME>"                              # mail-smtp : user name
+mail_smtp_password: "<MAIL_SMTP_PASSWORD>"                              # mail-smtp : password
+mail_smtp_useremail: "<MAIL_SMTP_USER_EMAIL>"                           # mail-smtp : user email
+mail_smtp_properties_auth: "true"                                       # mail-smtp : properties auth
+mail_smtp_properties_starttls_enable: "true"                            # mail-smtp : properties starttls enable
+mail_smtp_properties_starttls_required: "true"                          # mail-smtp : properties starttls required
+mail_smtp_properties_subject: "<MAIL_SMTP_PROPERTIES_SUBJECT>"          # mail-smtp : properties subject (e.g. "PaaS-TA User Potal")
+
+# PORTAL INFO
+default_portal_api_name: "PaaS-TA 5.0"                                  # portal : default api name
+default_portal_api_url: "http://<PORTAL-API-URL>:2225"                  # portal : default api url
+default_portal_header_auth: "Basic YWRtaW46b3BlbnBhYXN0YQ=="            # portal : default header auth
+default_portal_api_desc: "PaaS-TA 5.0 install infra"                    # portal : default api description
+default_portal_uaa_url: "http://<PORTAL-UAA-URL>:2225"                  # portal : default uaa url
+default_webadmin_ip: "<WEB_ADMIN_IP>"                                   # portal : default webadmin ip (e.g. "00.00.00.00")
+
+# PORTAL_WEBUSER_INFO
+portal_webuser_monitoring: false                                        # portal webuser : monitoring 사용 여부. true일 경우 앱 상세정보에서 모니터링창이 활성화 된다.
+portal_webuser_quantity: false                                          # portal webuser : 사용량 조회 창 활성화 여부
+portal_webuser_automaticapproval: false                                 # portal webuser : 회원가입시 PaaS-TA에 접속 가능 여부. true일 경우 관리자 포탈에서 승인을 해주어야 접근이 가능하다.
+
+# PORTAL_WEBADMIN_INFO
+infra_admin: false                                                      # portal webuser : infra admin (default "false")
+
+# ETC INFO
+paas_ta_web_user_url: "http://<PORTAL-USER-URL>"                        # etc : webuser url
+abacus_url: "http://<ABACUS-URL>"                                       # etc : abacus url
+monitoring_api_url: "http://<MONITORING-URL>:8080"                      # etc : monitoring url
+
+
